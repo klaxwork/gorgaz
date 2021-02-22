@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>liTranslit</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/liCover.css">
+</head>
+<body>
+
+<div class="conteiner">
+<h3>liTranslit - jQuery Translit или транслитерация кириллицы в латиницу </h3>
+<div class="navPr">
+	<span>Описание</span>
+</div>
+
+<fieldset>
+    <legend>Описание</legend>		
+
+liTranslit - транслитерация кириллицы в латиницу. Плагин liTranslit поможет вам передать латинскими буквами текст, который был написанный кириллическими символами. 
+<br />
+<br />
+Параметры плагина делают его очень гибким и универсальным. С его помощью вы  можете осуществлять:<br />
+- Мгновенный транслит печатаемого текста<br />
+- Транслит текста в другой элемент<br />
+- Транслит НЕтекстового поля<br />
+- Инъекцию собственных правил транслитерации
+
+</fieldset> 
+ 
+<fieldset>
+    <legend>Демо</legend>	
+    <p><a href="flash.html">Мгновенный транслит печатаемого текста</a></p> 
+	<p><a href="another.html">Транслит текста в другой элемент</a></p>  
+	<p><a href="notext.html">Транслит НЕтекстового поля</a></p> 
+	<p><a href="injection.html">Инъекция собственных правил транслитерации</a></p>
+	<p><a href="translated.html">Функция обратного вызова</a></p>
+	<p><a href="disable.html">Отключение плагина</a></p>
+	<p><a href="trigger.html">Триггер событий</a></p>
+     
+</fieldset> 
+<fieldset>
+    <legend>Подключаемые файлы</legend>		
+    <pre><xmp>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liTranslit.js"></script>
+    </xmp></pre>
+</fieldset> 
+
+<fieldset>
+    <legend>Инициализация плагина</legend>		
+    <pre><xmp>
+<script>
+$(function(){
+	$('.anyClass').liTranslit();
+})
+</script> 
+    </xmp></pre>
+</fieldset>
+
+<fieldset>
+    <legend>Код HTML</legend>		
+    <pre><xmp>
+	
+<input type="text" class="anyClass" value="">
+		
+    </xmp></pre>
+</fieldset>
+
+
+<fieldset>
+    <legend>Параметры</legend>	
+    
+    
+    <table class="optionsTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <th width="1%">Option</th>
+    <th width="1%">Default&nbsp;value</th>
+    <th>Datatype</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>eventType</td>
+    <td>'keyup blur copy paste cut start'</td>
+    <td>string</td>
+    <td>Задает тип события, по которому будет происходить транслитерация. <br>Может принимать значение <a target="_blank" rel="nofollow" href="http://api.jquery.com/category/events/">любого события jQuery</a>: <span class="value">'keyup'</span>, <span class="value">'blur'</span>, <span class="value">'copy'</span> и т.п.</td>
+  </tr>
+  <tr>
+    <td>elAlias</td>
+    <td>$(this)</td>
+    <td>object jquery</td>
+    <td>Определяет элемент, в который будет записываться результат транслитерации. <br>Принимает значение в виде объекта jQuery: <span class="value">$('.aliasClass')</span>, <span class="value">$('#aliasClass')</span>, <span class="value">$('input')</span> или <span class="value">false</span></td>
+  </tr>
+  <tr>
+    <td>reg</td>
+    <td>'[пустая строка]'</td>
+    <td>string</td>
+    <td>Задает собственные правила замены символов. <br>Может принимать значения: <span class="value">' "[текущий символ]"="[новый символ]" '</span>, <span class="value">' "ж"="ze" '</span>, <span class="value">' "ё"="jo","ж"="zzzz" '</span></td>
+  </tr>
+  <tr>
+    <td>caseType</td>
+    <td>'lower'</td>
+    <td>string</td>
+    <td>Задает тип регистра выходного значения. <br>Может принимать значения: <span class="value">'lower'</span>, <span class="value">'upper'</span>, <span class="value">'inherit'</span></td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td>true</td>
+    <td>boolean</td>
+    <td>Включает или отключает плагин сразу после инициализации. <br>Может принимать значения: <span class="value">true</span>, <span class="value">false</span></td>
+  </tr>
+  
+
+</table>
+</fieldset>
+
+
+<fieldset>
+    <legend>События</legend>	
+    	<h2 class="value">translated(el, text, eventType)</h2>
+        <p>Функция выполняется, после каждого шага транслитерации</p>
+       	<p><strong class="bold">el</strong><br>
+		Type: Object</p>
+        <p><strong class="bold">text</strong><br>
+        Type: String </p>
+		<p><strong class="bold">eventType</strong><br>
+        Type: String </p>
+        
+		<h2>Пример кода</h2>
+<pre><xmp>
+$('.anyClass').liTranslit({
+	translated:function(el, text, eventType){
+		alert('Транслитерация выполнена')
+	}
+});
+</xmp></pre>
+
+</fieldset> 
+
+
+
+<fieldset>
+    <legend>Методы</legend>	
+    	<h2 class="value">enable()</h2>
+        <p>Запускает плагин</p>
+        
+		<h2>Пример кода</h2>
+        $('.anyClass').liTranslit('enable')
+        
+
+        
+        
+       <h2 class="value">disable()</h2>
+        <p>Отключает плагин</p>
+        
+		<h2>Пример кода</h2>
+        $('.anyClass').liTranslit('enable')
+</fieldset> 
+
+<fieldset>
+    <legend>LOG</legend>	
+	25.10.2014 - В параметр "caseType" добавлено значение "inherit". При котором значение регистра вводимого символа не изменяется.<br>
+	02.03.2014 - Добавлен параметр "eventType", который задает тип события, по которому будет происходить транслитерация.<br>
+	02.03.2014 - Добавлен параметр "caseType", который задает тип регистра выходного значения<br>
+	02.03.2014 - Добавлен параметр "reg", который задает собственные правила замены символов<br>
+
+</fieldset>     
+	
+		
+</div> 
+<div class="autor">
+    <a class="logoMasscode" target="_blank" href="http://masscode.ru">
+    	<span class="logoMass">MASS</span>CODE<span class="logoMass">.RU</span>
+    </a>
+</div>
+</body>
+</html>
