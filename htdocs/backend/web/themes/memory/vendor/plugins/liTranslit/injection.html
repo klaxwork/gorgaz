@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>liTranslit</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liTranslit.js"></script>
+<script>
+$(function(){
+	$('.demo4_text').liTranslit({
+		elAlias: $('.demo4_translit')
+	});
+	$('.demo4_text').liTranslit({
+		elAlias: $('.demo4_translit2'),
+		reg:'"ё"="yo"' //'" "="-","ж"="zzzz"' or false or ''
+	});
+	$('.demo4_text').liTranslit({
+		elAlias: $('.demo4_translit3'),
+		reg:'"ё"="jooo","ж"="zzzzzz"' //'" "="-","ж"="zzzz"' or false or ''
+	});
+});
+</script>
+<style>
+
+</style>
+</head>
+<body>
+
+<div class="conteiner">
+<h3>liTranslit - jQuery Translit или транслитерация кириллицы в латиницу</h3>
+<div class="navPr">
+	<a href="index.html">Описание</a>
+    <span>Инъекцию собственных правил транслитерации</span>
+</div>
+
+<fieldset>
+    <legend>Результат</legend>	
+	<p><input type="text" class="demo4_text" value="ёжик"></p>
+	<p><input type="text" class="demo4_translit"> default</p>
+	<p><input type="text" class="demo4_translit2"> reg:'"ё"="yo"'</p>
+	<p><input type="text" class="demo4_translit3"> reg:'"ё"="jooo","ж"="zzzzzz"'</p>
+</fieldset> 
+
+<fieldset>
+    <legend>Подключаемые файлы</legend>		
+    <pre><xmp>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liTranslit.js"></script>
+    </xmp></pre>
+</fieldset> 
+
+<fieldset>
+    <legend>Инициализация плагина</legend>		
+    <pre><xmp>
+<script>
+$(function(){
+	$('.demo4_text').liTranslit({
+		elAlias: $('.demo4_translit')
+	});
+	$('.demo4_text').liTranslit({
+		elAlias: $('.demo4_translit2'),
+		reg:'"ё"="yo"'
+	});
+	$('.demo4_text').liTranslit({
+		elAlias: $('.demo4_translit3'),
+		reg:'"ё"="jooo","ж"="zzzzzz"'
+	});
+});
+</script> 
+    </xmp></pre>
+</fieldset>
+
+<fieldset>
+    <legend>Код HTML</legend>		
+    <pre><xmp>
+<body>
+	<input type="text" class="demo4_text" value="ёжик">
+	<input type="text" class="demo4_translit">
+	<input type="text" class="demo4_translit2">
+	<input type="text" class="demo4_translit3">
+</body>
+    </xmp></pre>
+</fieldset>
+
+</div>   
+
+<div class="autor">
+    <a class="logoMasscode" target="_blank" href="http://masscode.ru">
+    	<span class="logoMass">MASS</span>CODE<span class="logoMass">.RU</span>
+    </a>
+</div>
+
+</body>
+</html>

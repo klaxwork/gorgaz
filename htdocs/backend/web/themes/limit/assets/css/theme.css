@@ -1,0 +1,78 @@
+ul.fancytree-container li {
+    padding: 0;
+}
+
+.depressive:nth-child(even) {
+    background: #e9e9e9;
+}
+
+.depressive:hover {
+    background: #bdbdbd;
+}
+
+/* микро таблицы с выделением */
+.micro td, .micro th {
+    padding: 2px 12px !important;
+}
+
+.marking tbody tr:nth-child(2n) {
+    background-color: #f1f1f1;
+}
+
+.marking tbody tr:hover {
+    background-color: #fffb8c;
+}
+
+.marking tbody tr.activeTr {
+    background-color: #7bf17b !important;
+}
+
+.marking tbody tr.activeCM {
+    background-color: #c2e6f3 !important;
+}
+
+thead .move {
+    background-color: #ffd1cf;
+}
+
+.catalog-img-wrap__img {
+    position: absolute;
+    max-width: 780px;
+    margin: auto;
+}
+
+.numberBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #aaf;
+    border-radius: 40px;
+    padding: 2px 0 0 0;
+    line-height: 13px;
+    opacity: 1;
+    font-size: 11px;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    text-align: center;
+    background-color: #aaffc0;
+}
+
+.my_catalog-img-wrap {
+    Xposition: relative;
+    Xwidth: 780px;
+    margin: 0;
+    padding: 0;
+}
+
+.my_catalog-img-wrap__img {
+    Xposition: absolute;
+    Xwidth: 780px;
+    margin: 0;
+    padding: 0;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}

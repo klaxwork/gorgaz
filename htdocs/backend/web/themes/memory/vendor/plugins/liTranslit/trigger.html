@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>liTranslit</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liTranslit.js"></script>
+<script>
+$(function(){
+	$('.demo7').liTranslit({
+		status:false
+	});
+	$('.trigger').on('click',function(){
+		$('.demo7').liTranslit('enable');
+		$('.demo7').trigger('start');	
+		return false
+	});
+});
+</script>
+<style>
+.trigger {
+	text-decoration: none;
+	border-bottom: 1px dashed #ccc;
+	margin: 10px 0 0 0;
+	display: inline-block;
+}
+</style>
+</head>
+<body>
+
+<div class="conteiner">
+<h3>liTranslit - jQuery Translit или транслитерация кириллицы в латиницу</h3>
+<div class="navPr">
+	<a href="index.html">Описание</a>
+    <span>Триггер событий</span>
+</div>
+
+<fieldset>
+    <legend>Результат</legend>	
+	<input type="text" class="demo7" placeholder="Введите текст кириллицей">
+	<div><a class="trigger" href="#">Транслитерировать</a></div>
+</fieldset> 
+
+<fieldset>
+    <legend>Подключаемые файлы</legend>		
+    <pre><xmp>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.liTranslit.js"></script>
+    </xmp></pre>
+</fieldset> 
+
+<fieldset>
+    <legend>Инициализация плагина</legend>		
+    <pre><xmp>
+<script>
+$(function(){
+	$('.demo7').liTranslit({
+		status:false
+	});
+	$('.trigger').on('click',function(){
+		$('.demo7').liTranslit('enable');
+		$('.demo7').trigger('start');	
+		return false
+	});
+});
+</script> 
+    </xmp></pre>
+</fieldset>
+
+<fieldset>
+    <legend>Код HTML</legend>		
+    <pre><xmp>
+<body>
+	<input type="text" class="demo7">
+	<a class="trigger" href="#">Транслитерировать</a>
+</body>
+    </xmp></pre>
+</fieldset>
+
+</div>   
+
+<div class="autor">
+    <a class="logoMasscode" target="_blank" href="http://masscode.ru">
+    	<span class="logoMass">MASS</span>CODE<span class="logoMass">.RU</span>
+    </a>
+</div>
+
+</body>
+</html>

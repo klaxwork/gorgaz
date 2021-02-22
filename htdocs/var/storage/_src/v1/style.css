@@ -1,0 +1,410 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #e7e7e7 url("images/bg.jpg") repeat;
+	font-family: Arial;
+	font-size: 13px;
+	color: blue;
+	line-height: 20px;
+}
+
+::selection {
+	background-color: #0078c1;
+	color: white;
+}
+
+::-moz-selection {
+	background-color: #0078c1;
+	color: white;
+}
+
+a {
+	color: #0075d0;
+	text-decoration: underline;
+}
+
+p {
+	margin-bottom: 8px;
+}
+
+blockquote {
+	margin: -5px 0 8px 30px;
+	font-style: italic;
+	color: #8b8b8b;
+}
+
+blockquote:before {
+	content: "— ";
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #838383;
+	line-height: normal;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h1:first-letter,
+h2:first-letter {
+	color: #0078c1;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h1+p,h2+p,h3+p {
+	margin-top: 5px;
+}
+
+a img {
+	border: none;
+	outline: none;
+}
+
+ul,ol,dl {
+	margin: 0 0 0 30px;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 15px;
+}
+
+input,button,textarea {
+	display: inline-block;
+}
+
+input[type=text],textarea,select {
+	padding: 5px;
+	height: auto;
+	border: 1px solid #b7b7b7;
+}
+
+input[type=text],textarea {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+	-webkit-transition: all linear 0.2s;
+	-moz-transition: all linear 0.2s;
+	-ms-transition: all linear 0.2s;
+	-o-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+}
+
+input[type=checkbox],input[type=radio] {
+	margin: 3px 5px 0 0;
+	float: left;
+}
+
+input[type=text] {
+	width: 200px;
+}
+
+select {
+	width: 210px;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+}
+
+label {
+	display: block;
+	vertical-align: middle;
+}
+
+input:focus,button:focus,textarea:focus,select:focus {
+	outline: none;
+	border: 1px solid #0078c1;
+	box-shadow: none;
+}
+
+input:-moz-placeholder {
+  color: #c0c0c0;
+}
+
+input::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+
+button {
+	cursor: pointer;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #202020;
+	border: 1px solid blue;
+	padding: 8px 20px;
+}
+
+.row {
+	overflow: hidden;
+	margin: 8px 0;
+}
+
+.col {
+	float: left;
+	margin-right: 15px;
+	overflow: hidden;
+}
+
+table.bordered {
+	margin: 8px 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: 1px solid #d5d5d5;
+	width: 100%;
+}
+
+table.bordered th, table.bordered td {
+	border: 1px solid #d5d5d5;
+	padding: 5px;
+	vertical-align: top;
+}
+
+table.bordered th {
+	background-color: #efefef;
+	text-align: left;
+	font-weight: bold;
+}
+
+table.bordered tbody tr:hover {
+	background-color: #f2f2f2;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	z-index: 1;
+}
+/*Шапка*/
+.header {
+	height: 60px;
+	background: url("images/bg-header.jpg") repeat-x;
+}
+
+.headerContent {
+	width: 1000px;
+	height: 60px;
+	margin: 0 auto;
+	background: inherit;
+}
+
+.logo {
+	display: inline-block;
+}
+
+form.search {
+	float: right;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+form.search input[type=text] {
+	background-color: #0078c1;
+	border: 1px solid #4c4c4c;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,0.21);
+	-webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,0.21);
+	moz-box-shadow: inset 0 2px 3px rgba(0,0,0,0.21);
+	padding: 5px;
+	width: 350px;
+	margin-right: 7px;
+	color: #dddddd;
+	float: left;
+}
+
+/*Слайдер*/
+.slider {
+	height: 329px;
+	background-color: #0078c1;
+}
+
+.carousel {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	line-height: 1;
+}
+
+.carousel-inner {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.carousel .item {
+	position: relative;
+	display: none;
+	-webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -ms-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}
+
+.carousel .item > img {
+	display: block;
+	line-height: 1;
+}
+
+.carousel .active,
+.carousel .next,
+.carousel .prev {
+	display: block;
+}
+
+.carousel .active {
+	left: 0;
+}
+
+.carousel .next,
+.carousel .prev {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.carousel .next {
+	left: 100%;
+}
+
+.carousel .prev {
+	left: -100%;
+}
+
+.carousel .next.left,
+.carousel .prev.right {
+	left: 0;
+}
+
+.carousel .active.left {
+	left: -100%;
+}
+
+.carousel .active.right {
+	left: 100%;
+}
+
+.carousel-control {
+	position: absolute;
+	top: 40%;
+	left: 15px;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	font-size: 60px;
+	font-weight: 100;
+	line-height: 30px;
+	color: #ffffff;
+	text-align: center;
+	background: #222222;
+	border: 3px solid #ffffff;
+	-webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	text-decoration: none;
+}
+
+.carousel-control.right {
+	right: 15px;
+	left: auto;
+}
+
+.carousel-control:hover {
+	color: #ffffff;
+	text-decoration: none;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.carousel-caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10px 15px 5px;
+	background: #333333;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+	color: #ffffff;
+}
+/*Навигация*/
+ul.nav {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: blue;
+}
+
+ul.nav li {
+	float: left;
+	list-style: none;
+	border-right: 1px solid #272727;
+}
+
+ul.nav li a {
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	padding: 6px 25px 7px;
+	display: block;
+}
+
+ul.nav li a:hover {
+	background-color: #272727;
+}
+/*Контент*/
+.content {
+	background-color: white;
+	width: 1000px;
+	margin: 0 auto;
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	moz-box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.main {
+	padding: 10px;
+}
+
+.main img {
+	margin-right: 15px;
+	border: 10px solid #e2e2e2;
+}
+/*Подвал*/
+.footer {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 8px 0;
+}
+
+.footer p {
+	color: #656565;
+}
