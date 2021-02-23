@@ -104,3 +104,16 @@ thead .move {
     filter: alpha(opacity=50);
     text-decoration: none;
 }
+
+.page-container {
+    width: 1000px !important;
+}
+
+.navbar-component {
+    border-radius: 0 !important;
+}
+
+.layout-boxed {
+    background: #e7e7e7;
+}
+

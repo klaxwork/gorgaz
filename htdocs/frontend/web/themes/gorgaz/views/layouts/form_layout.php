@@ -42,6 +42,8 @@ $themePath = $this->theme->baseUrl;
 	<script type="text/javascript" src="<?= $themePath ?>/assets/js/plugins/pickers/daterangepicker.js"></script>
 
 	<script type="text/javascript" src="<?= $themePath ?>/assets/js/core/app.js"></script>
+	<script type="text/javascript" src="<?= $themePath ?>/assets/js/core/libraries/jquery_ui/core.min.js"></script>
+	<script type="text/javascript" src="<?= $themePath ?>/assets/js/plugins/forms/selects/selectboxit.min.js"></script>
 	<!-- /theme JS files -->
 
 	<link href="<?= $themePath ?>/assets/css/theme.css?<?= time(); ?>" rel="stylesheet">
@@ -104,7 +106,7 @@ $themePath = $this->theme->baseUrl;
 	<!--Меню-->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>
+			<a class="navbar-brand" href="index.html"><img src="<?= $themePath ?>/assets/images/logo_light.png" alt=""></a>
 
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>

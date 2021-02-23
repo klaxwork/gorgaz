@@ -11,10 +11,11 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 		content: '\e9b6';
 	}
 </style>
+
 <form id="OrderForm" action="" class="form-horizontal">
 	<div class="panel panel-flat">
 		<div class="panel-heading">
-			<h5 class="panel-title">Форма заявки</h5>
+			<h5 class="panel-title">Форма заявки...</h5>
 		</div>
 
 		<div class="panel-body">
@@ -22,7 +23,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			<!-- account -->
 			<div class="form-group">
 				<div class="row">
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Лицевой счет</label> <input type="text" name="order[account]"
 						                                   placeholder="Лицевой счет"
 						                                   class="form-control border-teal require"> <span
@@ -35,7 +36,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			<!-- ФИО -->
 			<div class="form-group">
 				<div class="row">
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Фамилия собственника</label> <input type="text" name="order[second_name_owner]"
 						                                           placeholder="Фамилия собственника"
 						                                           class="form-control border-teal require"> <span
@@ -43,7 +44,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 							заполнения</span>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Имя собственника</label> <input type="text" name="order[first_name_owner]"
 						                                       placeholder="Имя собственника"
 						                                       class="form-control border-teal require"> <span
@@ -51,7 +52,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 							заполнения</span>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Отчество собственника</label> <input type="text" name="order[third_name_owner]"
 						                                            placeholder="Отчество собственника"
 						                                            class="form-control border-teal require"> <span
@@ -73,7 +74,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 
 			<!-- agent -->
 			<div class="row">
-				<div id="AgentPanel" class="col-lg-6" style="border: 0; display: none;">
+				<div id="AgentPanel" class="col-lg-12" style="border: 0; display: none;">
 					<div class="panel">
 						<div class="panel-body">
 							<div class="form-group" id="AgentPanel">
@@ -728,6 +729,16 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 		//проверить, выбран ли пункт Другое
 		$('body')
 		//изменение вида оборудования
+			.on('click', '#IsDeclarantOwner', function () {
+				console.log('#IsDeclarantOwner click');
+				let isDeclarantOwner = $(this).prop('checked');
+				if (!isDeclarantOwner) {
+					$('#AgentPanel').show();
+				} else {
+					$('#AgentPanel').hide();
+				}
+			})
+
 			.on('change keyup', '.equipmentTypes', function () {
 				console.log('.equipmentTypes + change keyup');
 				url = '<?php echo \yii\helpers\Url::to(['/product/default/get-models-of-type']); ?>';
@@ -828,6 +839,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 					errorShow($(this));
 				}
 			})
+
 		;
 
 		$('#ReasonRef').on('change', function () {
@@ -840,7 +852,8 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			}
 		});
 
-		$('#IsDeclarantOwner').on('click', function () {
+		$('X#IsDeclarantOwner').on('click', function () {
+			console.log('#IsDeclarantOwner click');
 			let isDeclarantOwner = $(this).prop('checked');
 			if (!isDeclarantOwner) {
 				$('#AgentPanel').show();
@@ -850,6 +863,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 		});
 
 		$('#IsAddEquipment').on('click', function () {
+			console.log('#IsAddEquipment click');
 			let isAddEquipment = $(this).prop('checked');
 			if (isAddEquipment) {
 				$('#SettedEquipment').show();
