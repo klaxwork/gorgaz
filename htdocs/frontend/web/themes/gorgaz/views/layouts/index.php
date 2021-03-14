@@ -26,29 +26,6 @@ $themePath = $this->theme->baseUrl;
 	<!--Header-->
     <?= Yii::$app->controller->renderPartial('@layouts/_header.php'); ?>
 
-	<!--Слайдер-->
-	<div class="slider">
-		<div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="/images/gorgaz/slider-img1.jpg" alt="">
-				</div>
-
-				<div class="item">
-					<img src="/images/gorgaz/slider-img2.jpg" alt="">
-				</div>
-
-				<div class="item">
-					<img src="/images/gorgaz/slider-img3.jpg" alt="">
-				</div>
-			</div>
-
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <?php ?>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
-	</div>
-
 	<!-- CONTENT START index -->
 	<!--Контент-->
 	<div class="content">

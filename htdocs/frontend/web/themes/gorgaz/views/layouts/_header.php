@@ -2,7 +2,7 @@
 
 use common\components\M;
 
-M::printr('_header');
+//M::printr('_header');
 
 /** общее верхнее меню для всех страниц КРОМЕ главной*/
 ?>
@@ -16,3 +16,26 @@ M::printr('_header');
 		</form>
 	</div>
 </header>
+
+<!--Слайдер-->
+<div class="slider">
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="/images/gorgaz/slider-img1.jpg" alt="">
+			</div>
+
+			<div class="item">
+				<img src="/images/gorgaz/slider-img2.jpg" alt="">
+			</div>
+
+			<div class="item">
+				<img src="/images/gorgaz/slider-img3.jpg" alt="">
+			</div>
+		</div>
+
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <?php ?>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	</div>
+</div>

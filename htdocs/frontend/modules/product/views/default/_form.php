@@ -126,7 +126,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			<!-- индекс, область, город -->
 			<div class="form-group">
 				<div class="row">
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Индекс</label>
                         <?php ?>
 						<input type="text" name="order[index]" placeholder="Индекс"
@@ -135,7 +135,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 							заполнения</span>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Область/Край</label>
                         <?php ?>
 						<input type="text" name="order[state]" placeholder="Область/Край"
@@ -144,7 +144,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 							заполнения</span>
 					</div>
 
-					<div class="col-lg-2">
+					<div class="col-lg-4">
 						<label>Город/Населенный пункт</label>
                         <?php ?>
 						<input type="text" name="order[city]" placeholder="Город/Населенный пункт"
@@ -159,7 +159,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			<!-- улица, дом, корпус, квартира -->
 			<div class="form-group">
 				<div class="row">
-					<div class="col-lg-3">
+					<div class="col-lg-6">
 						<label>Улица</label>
                         <?php ?>
 						<input type="text" name="order[street]" placeholder="Улица"
@@ -168,7 +168,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 							заполнения</span>
 					</div>
 
-					<div class="col-lg-1">
+					<div class="col-lg-2">
 						<label>Номер дома</label>
                         <?php ?>
 						<input type="text" name="order[house]"
@@ -178,13 +178,13 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 							заполнения</span>
 					</div>
 
-					<div class="col-lg-1">
+					<div class="col-lg-2">
 						<label>Корпус</label> <input type="text" name="order[building]"
 						                             placeholder="Корпус"
 						                             class="form-control border-teal toAddress">
 					</div>
 
-					<div class="col-lg-1">
+					<div class="col-lg-2">
 						<label>Квартира</label> <input type="text" name="order[apartment]"
 						                               placeholder="Квартира"
 						                               class="form-control border-teal toAddress require"> <span
@@ -197,7 +197,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			<!-- полный адрес -->
 			<div class="form-group">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-12">
 						<label>Адрес объекта</label> <input type="text" name="order[address]"
 						                                    placeholder="Адрес объекта"
 						                                    class="form-control border-teal fullAddress">
@@ -293,7 +293,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 
 				<!-- оборудование -->
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-lg-12">
 						<div id="EquipmentLines">
 							<div class="equipmentLine hide" data-equipment_id="1">
 								<div class="panel">
@@ -395,7 +395,7 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 </form>
 
 <div class="row" id="Message" style="display: none;">
-	<div class="col-lg-3">
+	<div class="col-lg-offset-2 col-lg-8">
 		<div class="panel panel-flat">
 			<div class="panel-body">
 				<h4>Спасибо, ваша заявка принята.<br> После поступления и обработки заявки на сервере ей будет присвоен
@@ -676,12 +676,12 @@ $oTypes = EquipmentTypes::find()->orderBy('type_name ASC')->all();
 			//проверить каждое на пустоту и если есть ошибка, то количество ошибок увеличить на 1
 			let requires = $('.require');
 			$.each(requires, function (index, item) {
-				console.log('index', index);
-				console.log('item', $(item).val().trim());
-				console.log($(item).prop('type'));
-				console.log($(item).prop('class'));
+				//console.log('index', index);
+				//console.log('item', $(item).val().trim());
+				//console.log($(item).prop('type'));
+				//console.log($(item).prop('class'));
 				if ($(item).hasClass('require') || 0) {
-					console.log('ТРЕБУЕТСЯ');
+					//console.log('ТРЕБУЕТСЯ');
 					if ($(item).val().trim().length == 0) {
 						errorsCount++;
 						errorShow($(item));

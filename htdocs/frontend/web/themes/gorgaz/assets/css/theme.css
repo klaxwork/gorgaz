@@ -83,16 +83,16 @@ thead .move {
     color: #fff;
 }
 
-.Xcarousel-control {
+.carousel-control {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 15px;
     width: 40px;
     height: 40px;
     margin-top: -20px;
     font-size: 60px;
     font-weight: 100;
-    line-height: 30px;
+    line-height: 27px;
     color: #ffffff;
     text-align: center;
     background: #222222;
@@ -103,6 +103,10 @@ thead .move {
     opacity: 0.5;
     filter: alpha(opacity=50);
     text-decoration: none;
+}
+
+.carousel-control.right {
+    right: 15px;
 }
 
 .page-container {

@@ -332,7 +332,7 @@ form.search input[type=text] {
 }
 
 .carousel-control.right {
-    right: 150px;
+    right: 10px;
     left: auto;
 }
 
